@@ -120,7 +120,7 @@ header > #links > .menu-item:hover a {
     color: #9a99bf;
 }
 
-header > #links > .menu-item > .dropdown {
+#header-menu-dropdown {
   position: absolute;
   display: none;
   opacity: 0;
@@ -130,7 +130,13 @@ header > #links > .menu-item > .dropdown {
   box-shadow: 0px 0px 15px rgba(0, 0, 0, .5);
 }
 
-header > #links > .menu-item:hover > .dropdown {
+header > #links > .menu-item.desktop:hover > #header-menu-dropdown {
+  display: block;
+  opacity: 1.0;
+  animation: fade-in-menu 0.5s forwards;
+}
+
+#header-menu-dropdown.visible {
   display: block;
   opacity: 1.0;
   animation: fade-in-menu 0.5s forwards;
@@ -145,7 +151,7 @@ header > #links > .menu-item:hover > .dropdown {
   }
 }
 
-.dropdown > ul {
+#header-menu-dropdown > ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -153,13 +159,13 @@ header > #links > .menu-item:hover > .dropdown {
   color: black;
 }
 
-.dropdown > ul > li {
+#header-menu-dropdown > ul > li {
   padding: 10px;
   -webkit-transition: all 250ms cubic-bezier(0.47, 0, 0.745, 0.715);
   transition:         all 250ms cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 
-.dropdown > ul > li:hover {
+#header-menu-dropdown > ul > li:hover {
   background-color: #9a99bf;
 }
 

@@ -7,10 +7,21 @@
           <div class="menu-item"><a href="index.html">Home</a></div>
           <div class="menu-item"><a href="programs.html">Programs</a></div>
           <div class="menu-item"><a href="enrichment.html">Enrichment</a></div>
-          <div class="menu-item">
+          <div class="menu-item desktop">
             <a href="about.html">About</a>
-            <div class="dropdown">
+            <div id="header-menu-dropdown" class="dropdown">
               <ul>
+                <li><a class="menu-item-link" href="schedule.html">Daily Schedule</a></li>
+                <li><a class="menu-item-link" href="meals.html">Meals and Snacks</a></li>
+                <li><a class="menu-item-link" href="tuition.html">Tuition and Fees</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="menu-item mobile">
+            <a href="#">About</a>
+            <div id="header-menu-dropdown" class="dropdown">
+              <ul>
+                <li><a class="menu-item-link" href="about.html">About Us</a></li>
                 <li><a class="menu-item-link" href="schedule.html">Daily Schedule</a></li>
                 <li><a class="menu-item-link" href="meals.html">Meals and Snacks</a></li>
                 <li><a class="menu-item-link" href="tuition.html">Tuition and Fees</a></li>
@@ -21,4 +32,34 @@
           <div class="menu-item"><a href="contact.html">Contact Us</a></div>
       </div>
   </header>
+  <script>
+    $(document).ready(function() {
+      function removeElement(selector) {
+        document.querySelector(selector).remove();
+      }
+
+      if (isMobile.any()) {
+        removeElement('.menu-item.desktop');
+
+        var dropdown = document.querySelector('#header-menu-dropdown');
+        var clickCaptured = false;
+
+        dropdown.parentNode.addEventListener("click", function() {
+          dropdown.classList.add('visible');
+          clickCaptured = true;
+        });
+
+        document.addEventListener("click", function() {
+          setTimeout(function() {
+            if (!clickCaptured) {
+              dropdown.classList.remove('visible');
+            }
+            clickCaptured = false;
+          }, 0);
+        });
+      } else {
+        removeElement('.menu-item.mobile');
+      }
+    });
+  </script>
 </div>

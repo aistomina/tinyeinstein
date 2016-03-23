@@ -18,3 +18,24 @@
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width; initial-scale=1; user-scalable=1; maximum-scale=1">
   <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+  <script src="js/vendor/jquery-1.11.2.min.js"></script>
+
+  <script>
+    var isMobile = {
+      Windows: function() {
+          return /IEMobile/i.test(navigator.userAgent);
+      },
+      Android: function() {
+          return /Android/i.test(navigator.userAgent);
+      },
+      BlackBerry: function() {
+          return /BlackBerry/i.test(navigator.userAgent);
+      },
+      iOS: function() {
+          return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+      },
+      any: function() {
+          return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Windows());
+      }
+    };
+  </script>
