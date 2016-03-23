@@ -1,3 +1,8 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
 * {
     box-sizing: border-box;
 }
@@ -397,7 +402,7 @@ footer li {
 .contact-img {
   width: 54%;
   height: 300px;
-  background-image: url('images/contact2.jpg');
+  background-image: url('../images/contact2.jpg');
   background-position: 50% 15%;
   background-size: cover;
 }
