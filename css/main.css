@@ -46,8 +46,8 @@ h3 {
 }
 
 h1,h2,h3 {
-  color: #6a62ab;
-  font-family: oswald, sans-serif;
+  color: #d4642b;
+  font-family: Oswald, sans-serif;
 }
 
 body {
@@ -57,9 +57,9 @@ body {
 }
 
 .header-wrapper {
-  height: 135px;
+  height: 180px;
   width: 100%;
-  background-color: #6a62ab; 
+  border-bottom: 1px solid #d0d1d3;
 }
 
 header {
@@ -78,18 +78,36 @@ header > * {
 
 header > #logo {
   margin: 0;
-  padding: 24px 0 0 0;
+  padding: 18px 0;
   bottom: 0;
   height: 100%;
 }
 
-header > #logo img {
-  height: 90px;
+header > #logo > a {
+  height: 100%;
+  display: block;
 }
-@media only screen and (max-width: 420px) {
+
+header > #logo img {
+  display: inline-block;
+}
+
+header  > #logo img#logo-img {
+  height: 100%;
+}
+
+header  > #logo img#logotype-img {
+  height: 35%;
+  margin-bottom: 13%;
+}
+
+@media only screen and (max-width: 575px) {
   header > #logo img {
-    width: 100%;
+    width: 70%;
     height: auto;
+  }
+  header > #logo > a {
+      flex-direction: column;
   }
 }
 
@@ -113,11 +131,11 @@ header > #links > .menu-item {
 }
 
 header > #links > .menu-item a {
-    color: white;
+    color: #d4642b;
 }
 
 header > #links > .menu-item:hover a {
-    color: #9a99bf;
+    color: #f67d2b;
 }
 
 #header-menu-dropdown {
@@ -166,11 +184,11 @@ header > #links > .menu-item.desktop:hover > #header-menu-dropdown {
 }
 
 #header-menu-dropdown > ul > li:hover {
-  background-color: #9a99bf;
+  background-color: #e2e2e2;
 }
 
 header > #links > .menu-item a.menu-item-link {
-  color: #6a62ab;
+  color: #d4642b;
 }
 
 @media only screen and (max-width: 1075px) {
@@ -195,6 +213,15 @@ header > #links > .menu-item a.menu-item-link {
     header > #logo {
       left: 0;
       text-align: center;
+    }
+    header > #logo > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    header > #logo img#logotype-img {
+      margin-bottom: 0;
+      margin-left: 10px;
     }
     header > #links {
         margin-left: -10px;
@@ -282,12 +309,12 @@ footer {
     margin: -105px auto 0 auto;
     overflow: auto;
     text-decoration: none;
-    background-color: rgba(106, 98, 171, 0.4);
+    background-color: rgba(212, 100, 43, 0.9);
     font-size: 14px;
 }
 
 footer, footer a {
-  color: #6a62ab;
+  color: #ffffff;
 }
 
 footer h3 {
@@ -339,7 +366,7 @@ footer li {
 
 .button-with-style {
   border: none;
-  background-color: #6a62ab;
+  background-color: #d4642b;
   color: white;
   font-size: 18px;
   padding: 5px 15px;
